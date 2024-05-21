@@ -10,7 +10,7 @@ public class Fatima
         System.out.print("Digite o numero: ");
         n = scanner.nextInt();
         
-        for (int i = n; i == 1; i--){
+        for (int i = n; i >= 1; i--){
             f = f * i;
         }
         System.out.print("O Fatorial de " + n + " é " + f);
