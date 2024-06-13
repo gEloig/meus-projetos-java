@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class QuizGame {
-
     public static void main(String[] args) {
         String NomeUsuario;
         char[] Respostas = new char[10];
@@ -20,32 +19,42 @@ public class QuizGame {
             "QUIZ 10. Quem pintou a Mona Lisa?\nA) Vincent van Gogh\nB) Pablo Picasso\nC) Leonardo da Vinci\nD) Michelangelo"
         };
     
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("CARREGANDO O QUIZ GAME >>>>>>");
-    System.out.println(">>>>>> QUAL É O SEU NOME? ");
-    NomeUsuario = scanner.nextLine();
-    System.out.println("----------------------------------------------------------------");
-    System.out.println("###### BEM VINDO AO QUIZ GAME - " + NomeUsuario + " ######");
-    System.out.println(">>>>>> DICA: Ultilize letra maiuscula em cada resposta das perguntas <<<<<<");
-    System.out.println("Gostaria de jogar?");
-    System.out.println("1 - Sim");
-    System.out.println("2 - Não");
-    System.out.print(">>>>>> Digite uma opção: ");
-    OpcaoUsuario = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("CARREGANDO O QUIZ GAME >>>>>>");
+        System.out.println(">>>>>> QUAL É O SEU NOME? ");
+        NomeUsuario = scanner.nextLine();
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("###### BEM VINDO AO QUIZ GAME - " + NomeUsuario + " ######");
+        System.out.println(">>>>>> DICA: Ultilize letra maiuscula em cada resposta das perguntas <<<<<<");
+        System.out.println("Gostaria de jogar?");
+        System.out.println("1 - Sim");
+        System.out.println("2 - Não");
+        System.out.print(">>>>>> Digite uma opção: ");
+        OpcaoUsuario = scanner.nextInt();
 
-    while(OpcaoUsuario == 1) {
-        System.out.println(Perguntas[Posicao]);
-        System.out.print("Sua resposta é: ");
-        Respostas[Posicao] = scanner.next().charAt(Posicao);
-        Posicao++; 
-        LimiteRespostas++;
-        }
-
-        if  (OpcaoUsuario == 2) {
-            System.out.println("----------------------------------------------------------------");
-            System.out.println("Saindo do QUIZ GAME em 3 . . . 2 . . . 1 . . . - Até a próxima:");
-        }
+        while(OpcaoUsuario == 1) {
+         System.out.println(Perguntas[Posicao]);
+            System.out.print("Sua resposta é: ");
+            Respostas[Posicao] = scanner.next().charAt(0);
+            Posicao++; 
+            LimiteRespostas++;
         
+
+                if (LimiteRespostas == 10) {
+                    for (int indice = 0; indice < Gabarito.length; indice++) {
+                        if (Gabarito[indice] == Respostas[indice]) {
+                        Pontuacao = Pontuacao + 1;
+                        }
+                    }
+                        System.out.println("----------------------------------------------------------------");
+                        System.out.println("FIM DE JOGO - Sua pontuacão foi" + Pontuacao);
+                }
+
+            if (OpcaoUsuario == 2) {
+                System.out.println("----------------------------------------------------------------");
+                System.out.println("Saindo do QUIZ GAME em 3 . . . 2 . . . 1 . . . - Até a próxima:");
+            }
+        }
 
     
     }
