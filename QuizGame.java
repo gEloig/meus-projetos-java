@@ -46,8 +46,28 @@ public class QuizGame {
                         Pontuacao = Pontuacao + 1;
                         }
                     }
-                        System.out.println("----------------------------------------------------------------");
-                        System.out.println("FIM DE JOGO - Sua pontuacão foi" + Pontuacao);
+
+                        if (Pontuacao <= 6 && Pontuacao != 0) {
+                            System.out.println("----------------------------------------------------------------");
+                            System.out.println("Sua pontuação é:" + Pontuacao + "\nPoderia ser melhor não acha?");
+
+                        }
+                        if (Pontuacao > 6 && Pontuacao != 10) {
+                            System.out.println("----------------------------------------------------------------");
+                            System.out.println("Sua pontuação é:" + Pontuacao + "\nParabens!");
+                        }
+                        if (Pontuacao == 0) {
+                            System.out.println("----------------------------------------------------------------");
+                            System.out.println("Sua pontuação é:" + Pontuacao + "\n0 . . . é sério?");
+
+                        }
+                        if (Pontuacao == 10) {
+                            System.out.println("----------------------------------------------------------------");
+                            System.out.println("Sua pontuação é:" + Pontuacao + "\nPARABENS!!!! VOCÊ FOI INCRÍVEL!!!!!!!");
+
+                        }
+                        break;
+
                 }
 
             if (OpcaoUsuario == 2) {
