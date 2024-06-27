@@ -16,6 +16,6 @@ public class CompararNumeros{
     System.out.println("Os números são iguais");
     if (numero1 < numero2)
     System.out.println("O 2* é maior");
-
+    scanner.close();
     }
 }

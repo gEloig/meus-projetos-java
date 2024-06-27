@@ -11,7 +11,7 @@ public class Telefonia{
     System.out.println("3 - Plano Premium (Adição de 100 minutos de ligação)\n");
     System.out.print("Opção: ");
     opcao = scan.nextInt();
-    
+
     switch(opcao) {
         case 1: System.out.println("Parabéns! O Plano selecionado foi: \nPlano Básico (5Gb Youtube)");
         break ;
@@ -22,6 +22,6 @@ public class Telefonia{
         default:
         System.out.println("Sua Opção é invalida");
         }
-
+        scan.close();
     }
 }

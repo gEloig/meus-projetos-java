@@ -10,7 +10,7 @@ public class Main
         n = scanner.nextInt();
         System.out.println("Digite o segundo numero: ");
         i = scanner.nextInt();
-        
+        scanner.close();
         soma= i + n;
         subtracao= i - n;
         multiplicacao= i * n;

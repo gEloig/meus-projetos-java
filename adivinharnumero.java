@@ -7,11 +7,11 @@ public class adivinharnumero {
         Scanner scan = new Scanner(System.in);
         Scanner scanner = new Scanner(System.in);
         
-        int numeroAleatorio, numeroUsuario;
+        int numeroAleatorio, numeroUsuario = 0;
 
         numeroAleatorio = rd.nextInt(11);
 
-        while (numeroAleatorio != numeroUsuario) {
+        while (numeroAleatorio!=numeroUsuario) {
             System.out.print("Tente acertar o numero de 0 a 10: ");
             numeroUsuario = scan.nextInt();
 
@@ -21,6 +21,7 @@ public class adivinharnumero {
                 System.out.print("Você errou!");
 
             }
-        }
+            numeroUsuario++;
+        }scanner.close(); scan.close();
     }
 }

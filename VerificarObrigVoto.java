@@ -14,6 +14,6 @@ public class VerificarObrigVoto{
     System.out.println("Seu voto é facultativo");
     if (idade < 16)
     System.out.println("Você não precisa votar");
-
+    scanner.close();
     }
 }

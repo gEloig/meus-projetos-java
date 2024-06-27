@@ -74,7 +74,7 @@ public class QuizGame {
                 System.out.println("----------------------------------------------------------------");
                 System.out.println("Saindo do QUIZ GAME em 3 . . . 2 . . . 1 . . . - Até a próxima:");
             }
-        }
+        } scanner.close();
 
     
     }
